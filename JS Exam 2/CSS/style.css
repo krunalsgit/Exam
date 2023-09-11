@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* For Background  */
+body {
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    overflow: auto;
+    background: linear-gradient(90deg, rgba(183, 182, 226) 0%, rgba(49, 112, 83, 0.236) 50%, rgba(223, 152, 152) 100%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 17em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+.btn{
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(199, 142, 194, 0.77) 3%, rgb(170, 177, 209) 38%, rgb(199 181 201) 68%, rgb(150 161 215 / 81%) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    color: rgb(78, 77, 77);
+    border: 2px solid rgb(143, 140, 140);
+    font-weight: bold;
+}
+.btn:hover{
+    border: 2px solid rgb(112, 112, 112);
+    color: black;
+}
+
+.modal{
+    background: rgb(0 0 0 / 18%)
+}
+
+.modal-content{
+    background: linear-gradient(315deg, rgba(199, 142, 194, 0.77) 3%, rgb(170, 177, 209) 38%, rgb(199 181 201) 68%, rgb(150 161 215 / 81%) 98%);
+    animation: gradient 25s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    border: 1px solid #000000;
+    color: black;
+    height: 2px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #a09999;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #000000;
+  }
+
+  
+.modal-content{
+    background: linear-gradient(90deg, rgb(179 179 197 / 86%) 0%,rgba(210, 180, 197, 0.86) 50%,  rgb(184 209 209 / 87%) 100%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed
+}
+
+
+.modal-dialog{
+    max-width: 50%!important;
+}
+
+@media only screen and (max-width: 1400px) {
+    #studentDataTable_wrapper{
+        overflow: auto;
+    }
+  }

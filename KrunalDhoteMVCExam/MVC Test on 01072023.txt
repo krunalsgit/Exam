@@ -1,0 +1,37 @@
+Total marks 100
+Passing marks 70
+
+Question 1 :
+	Create a login page with validation --10 Marks
+	
+Question 2 :
+	Create a registration page with validation --40 Marks
+		--Fields should be :	
+			--First Name
+			--Last Name
+			--Email 
+			--Password (Characters should not be visible)
+			--Date of birth (Date Picker)
+			--Address
+			--Country
+			--State (Dependable drop down based on country selection) (Data should be from Database)
+			--City (Dependable drop down based on state and country selection) (Data should be from Database)
+			--Profile photo (Image upload path should be stored in database)
+			--Attachment (Multiple documents upload)
+			--Gender (Radio Button)
+			--Hobbies (Check box and multi selection)
+
+Question 3 :
+	Create a view page to disaplay all the information as per above data -- 20
+	--In the display information there should be documents view option 
+	--In this page there should be edit button and on edit button click open a pop up for edit information.
+	--Profile Photo should also be editable.
+	
+Question 4 : 20
+	--Maintain a session for the login user.
+	--Profile photo with login user First name + Last name should be visible on the top right corner of the page.
+	--once i update the profile photo it should be directly reflected on the view page.
+	
+Question 5 :
+	--Extra 10 marks for proper design and implementation.
+	

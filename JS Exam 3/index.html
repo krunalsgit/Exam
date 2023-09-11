@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+
+    <!-- Shrot Icon  -->
+    <link rel="shortcut icon" href="Image/MicrosoftTeams-image-modified.png" type="image/x-icon">
+
+    <!-- DataTable  -->
+    <link rel="stylesheet" href="DataTables/datatables.min.css">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- jQuery  -->
+    <script src="JS/jQuery.js"></script>
+
+    <script src="DataTables/datatables.min.js"></script>
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Select 2  -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <title>Krunal Dhote JS EXAM 3</title>
+</head>
+
+<body>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div class="container text-center mt-5">
+        <h1>Resistration Form</h1>
+        <!-- Button trigger modal -->
+        <button id="openForm" type="button" class=" btn btn-primary mt-5" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            Open Form
+        </button>
+
+        <!-- Modal 1-->
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Add User </h5>
+                        <button id="close" type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <form id="RegisterForm" class="m-5 mt-3" action="">
+                        <div class="row">
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput" class="form-label">Name</label>
+                                <input id="name" type="text" class="form-control" placeholder="FirstName LastName">
+                                <div id="nameErr" class="text-danger m-1"></div>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput2" class="form-label">DOB</label>
+                                <input id="dob" type="date" class="form-control">
+                                <div id="dobErr" class="text-danger m-1"></div>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput2" class="form-label">Email</label>
+                                <input id="mail" type="email" class="form-control" placeholder="example@gmail.com">
+                                <div id="mailErr" class="text-danger m-1"></div>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput2" class="form-label">Contact Number</label>
+                                <input id="phone" type="tel" class="form-control" placeholder="+91">
+                                <div id="phnErr" class="text-danger m-1"></div>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput2" class="form-label mt-2">Gender</label>
+                                <div class="mb-3 col d-flex form-check">
+                                    <input id="m" type="radio" class="form-check-input m-2" name="numbers"
+                                        value="Male"/>Male<br />
+                                    <input id="f" type="radio" class="form-check-input m-2" name="numbers"
+                                        value="Female" />Female<br />
+                                    <input id="t" type="radio" class="form-check-input m-2" name="numbers"
+                                        value="Trans Gender" />Trans<br />
+                                    </div>
+                                <div id="genderErr" class="text-danger"></div>
+                            </div>
+                           
+
+                            <div class="mt-2">
+                                <button type="button" id="submit" class="btn btn-primary"
+                                    onclick="RegisterForm()">Submit</button>
+                                <button type="button" id="update" class="btn btn-primary"
+                                    onclick="UpdateRegisterForm()">Update</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal 2  -->
+        <div class="modal fade" id="tasksAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="taskFormLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Add Task</h5>
+                        <button id="close" type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <form id="tasks" class="m-5 mt-3" action="">
+                        <div class="row">
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput" class="form-label">Title</label>
+                                <input id="taskTitle" type="text" class="form-control">
+                                <div id="taskTitleErr" class="text-danger m-1"></div>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput2" class="form-label">Description</label>
+                                <input id="Desc" type="text" class="form-control">
+                                <div id="DescErr" class="text-danger m-1"></div>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput2" class="form-label">Due Date</label>
+                                <input id="DueDate" type="date" class="form-control">
+                                <div id="DueDateErr" class="text-danger m-1"></div>
+                            </div>
+                            <div class=" mt-2">
+                                <button id="addTask" type="button" class="btn btn-primary" onclick='TasksForm()'>Submit</button>
+                                <button id="updateTask" type="button" class="btn btn-primary" onclick='updateTasks()'>Update</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Modal 3  -->
+        <div class="modal fade" id="AltertPop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="tratmentFormLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Alert Due Date</h5>
+                        <button id="close" type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <form id="tasks" class="m-5 mt-3" action="">
+                        <div class="row">
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput2" class="form-label">User Name</label>
+                                <input id="uName" type="text" class="form-control" disabled>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput" class="form-label">Title</label>
+                                <input id="tTitle" type="text" class="form-control" disabled>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="formGroupExampleInput2" class="form-label">Due Date</label>
+                                <input id="dDate" type="date" class="form-control" disabled>
+                            </div>
+                            <div class=" mt-2">
+                                <button  type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">OK</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class=" table-responsive mt-5">
+            <table id="userTable" class="table mt-5">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>DOB</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h1></h1>
+    </div>
+
+
+    <script src="JS/script.js"></script>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

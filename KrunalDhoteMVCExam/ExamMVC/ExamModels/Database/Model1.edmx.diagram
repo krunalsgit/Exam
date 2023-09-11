@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9824a88032614ec181d9c63d0f799e44" Name="Diagram1">
+        <EntityTypeShape EntityType="KrunalDhote351Model1.City" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model1.Country" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model1.ExamMVC" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model1.State" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="KrunalDhote351Model1.FK__City__CountryId__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model1.FK__City__StateId__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model1.FK__ExamMVC__City__76619304" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model1.FK__ExamMVC__Country__74794A92" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model1.FK__State__CountryId__3A4CA8FD" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model1.FK__ExamMVC__State__756D6ECB" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

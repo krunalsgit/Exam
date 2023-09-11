@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+    <!-- Shrot Icon  -->
+    <link rel="shortcut icon" href="Image/MicrosoftTeams-image-modified.png" type="image/x-icon">
+
+    <!-- DataTable  -->
+    <link rel="stylesheet" href="DataTable/datatables.min.css">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- jQuery  -->
+    <script src="JS/jQuery.js"></script>
+
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Krunal Dhote JS EXAM</title>
+</head>
+
+<body>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <div class="container text-center mt-5">
+        <h1>Calculations Form</h1>
+        <!-- Button trigger modal -->
+        <button id="openForm" type="button" class="btn btn-primary mt-5" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            Open Form
+        </button>
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form action="" id="form">
+                        <div class="modal-header">
+                            <strong><h1 class="modal-title fs-5" id="staticBackdropLabel">Calculate Here</h1></strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="val1" class="form-label">Value 1</label>
+                                    <input type="number" class="form-control" id="val1">
+                                    <div id="val1Err" class="text-danger"></div>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="val2" class="form-label">Value 2</label>
+                                    <input type="number" class="form-control" id="val2">
+                                    <div id="val2Err" class="text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="m-2">
+                                <div class="row m-2 text-start">
+                                    <div class="form-check col">
+                                        <label class="form-check-label" for="addition">
+                                            Addition
+                                            <input class="form-check-input" type="checkbox" value="" id="addition">
+                                        </label>
+                                    </div>
+                                    <div class="col"></div>
+                                    <div class="form-check col">
+                                        <label class="form-check-label" for="subtraction">
+                                            Subtraction
+                                            <input class="form-check-input" type="checkbox" value="" id="subtraction">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row m-2 text-start">
+                                    <div class="form-check col">
+                                        <label class="form-check-label" for="divide">
+                                            Division
+                                            <input class="form-check-input" type="checkbox" value="" id="divide">
+                                        </label>
+                                    </div><div class="col"></div>
+                                    <div class="form-check col">
+                                        <label class="form-check-label" for="multiply">
+                                            Multiplication
+                                            <input class="form-check-input" type="checkbox" value="" id="multiply">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row m-2 text-start">
+                                    <div class="form-check col">
+                                        <label class="form-check-label" for="percentage">
+                                            Pertcentage
+                                            <input class="form-check-input" type="checkbox" value="" id="percentage">
+                                        </label>
+                                    </div><div class="col"></div>
+                                    <div class="form-check col">
+                                        <label class="form-check-label" for="wholeSquare">
+                                            Whole Square
+                                            <input class="form-check-input" type="checkbox" value="" id="wholeSquare">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-danger" id="checkErr"></div>
+                        </div>
+                        <div class="modal-footer text-center">
+                            <button type="button" class="btn btn-primary" id="calculate">Calculate</button>
+
+                            <button type="button" class="btn btn-primary" id="calculateAgain">Calculate</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class=" table-responsive mt-5">
+            <table id="calculationTable" class="table mt-5">
+                <thead>
+                    <tr>
+                        <th scope="col">Value 1</th>
+                        <th scope="col">Value 2</th>
+                        <th scope="col">Addition</th>
+                        <th scope="col">Subtraction</th>
+                        <th scope="col">Division</th>
+                        <th scope="col">Multiplication</th>
+                        <th scope="col">Percentage</th>
+                        <th scope="col">Whole Square</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+      
+    <script src="JS/script.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="DataTable/datatables.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--     
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+      -->
+
+
+
+    <script src="bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
